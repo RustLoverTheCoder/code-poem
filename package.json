@@ -21,11 +21,11 @@
     "vite-plugin-solid": "^2.3.0"
   },
   "dependencies": {
+    "@codemirror/commands": "^6.1.0",
     "@codemirror/lang-javascript": "^6.0.2",
     "@codemirror/state": "^6.1.1",
     "@codemirror/view": "^6.2.2",
     "@tauri-apps/api": "^1.0.0",
-    "solid-codemirror": "^2.0.2",
     "solid-js": "^1.4.7"
   }
 }

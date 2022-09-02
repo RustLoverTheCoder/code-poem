@@ -1,27 +1,23 @@
-import { createCodeMirror } from "solid-codemirror";
-import { javascript } from "@codemirror/lang-javascript";
+// import { createCodeMirror } from "solid-codemirror";
+// import { javascript } from "@codemirror/lang-javascript";
 import { createSignal, onMount } from "solid-js";
+import { EditorState } from "@codemirror/state";
+import { EditorView, keymap } from "@codemirror/view";
 
 const Editor = () => {
-  const {
-    editorView,
-    ref: editorRef,
-    createExtension,
-  } = createCodeMirror({
-    // The initial value of the editor
-    value: "console.log('hello world!')",
-    // Fired whenever the editor code value changes.
-    onValueChange: (value) => console.log("value changed", value),
-    // Fired whenever a change occurs to the document. There is a certain difference with `onChange`.
-    onModelViewUpdate: (modelView) => {
-      console.log("modelView updated", modelView);
-    },
+  let editorRef: HTMLDivElement;
+  onMount(() => {
+    let startState = EditorState.create({
+      doc: "Hello World",
+    });
+    let view = new EditorView({
+      state: startState,
+      parent: editorRef,
+    });
+    console.log("view", view);
   });
 
-  createExtension(javascript());
-
-  console.log("editorView", editorView);
-
+  //@ts-ignore
   return <div ref={editorRef} class="w-full h-full text-sm" />;
 };
 
