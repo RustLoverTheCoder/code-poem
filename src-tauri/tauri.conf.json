@@ -56,10 +56,10 @@
     "windows": [
       {
         "fullscreen": false,
-        "height": 600,
+        "height": 750,
         "resizable": true,
         "title": "poem",
-        "width": 800
+        "width": 1024
       }
     ]
   }
