@@ -7,8 +7,8 @@
     "withGlobalTauri": false
   },
   "package": {
-    "productName": "poem",
-    "version": "0.0.0"
+    "productName": "CodePoem",
+    "version": "0.0.1"
   },
   "tauri": {
     "allowlist": {
@@ -58,7 +58,7 @@
         "fullscreen": false,
         "height": 750,
         "resizable": true,
-        "title": "poem",
+        "title": "CodePoem",
         "width": 1024
       }
     ]
